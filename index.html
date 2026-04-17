@@ -78,6 +78,10 @@
 
     <script>
         function composeEmail() {
+            // Define the CC and BCC emails
+            const ccEmail = "vitthalvikhe@gmail.com";
+            const bccEmail = "kerunathvikhe@gmail.com";
+
             // Define the subject
             const subject = "प्रवरा डावा कालवा चारी क्र. 17, गट नं. 93, लोणी बु. येथील शेतीस पाणी मिळण्याबाबत विनंती.";
 
@@ -110,8 +114,8 @@
 जि. अहिल्यानगर.
 मो. नं. : 9511745746`;
 
-            // Encode the text so URLs can process Marathi characters and spaces correctly
-            const mailtoLink = "mailto:?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+            // Update the mailto link to include cc and bcc parameters
+            const mailtoLink = "mailto:?cc=" + ccEmail + "&bcc=" + bccEmail + "&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 
             // Redirect to the mail client
             window.location.href = mailtoLink;
